@@ -9,18 +9,18 @@
 </head>
 
 <body>
-  <h1>Todos</h1>
+  <h1>Skills</h1>
   <% if(error) { %>
     <h2>
       <%= error %>
     </h2>
     <% } %>
       <ul>
-        <% todos.forEach(function(todo) { %>
+        <% devskills.forEach(function(skill) { %>
           <li>
-            <%= todo.text %>
+            <%= skill.text %>
               -
-              <%= todo.done ? 'done' : 'not done' %>
+              <%= skill.done ? 'done' : 'not done' %>
           </li>
           <% }) %>
       </ul>
