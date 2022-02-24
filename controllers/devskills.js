@@ -18,7 +18,20 @@ function show(req, res) {
   })
 }
 
+function newSkill(req, res){
+  res.render('devskills/new')
+}
+
+function create(req, res){
+  console.log(req.body)
+  devSkillsDb.create(req.body, function(error, skill){
+    res.redirect('/devskills')
+  })
+}
+
 export {
   index,
-  show
+  show,
+  newSkill as new,
+  create
 }
