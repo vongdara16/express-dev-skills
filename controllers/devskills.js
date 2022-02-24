@@ -10,9 +10,9 @@ function index (req, res) {
 }
 
 function show(req, res) {
-  devSkillsDb.findById(req.params.id, function(error, devSkills) {
+  devSkillsDb.findById(req.params.id, function(error, skill) {
     res.render('devskills/show', {
-      devSkills: devSkills,
+      skill: skill,
       error: error
     })
   })
