@@ -40,8 +40,20 @@ function create (skill, callback) {
   return callback(null, skill)
 }
 
+function findByIdAndDelete(id, callback){
+  try {
+    const idx = devSkills.findIndex(skill => skill._id == parseInt(id))
+    const deletedSkill = devSkills.splice(idx, 1)
+    if(!deletedSkill.length) throw new Error('No Skill was deleted')
+    return callback(null, deletedSkill[0])
+  } catch(error) {
+    return callback(error, null)
+  }
+}
+
 export { 
 	find,
   findById,
-  create
+  create,
+  findByIdAndDelete
 }
