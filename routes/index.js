@@ -9,3 +9,5 @@ router.get('/', function(req, res) {
 export { 
   router
 }
+
+console.log(Router)

@@ -14,17 +14,19 @@
     <h2>
       <%= error %>
     </h2>
-    <% } %>
-      <ul>
-        <% devSkills.forEach(function(skill) { %>
-          <li>
-            <a href="/devskills/<%= skill._id %>"><%= skill.text %> </a>
-              -
-              <%= skill.done ? 'done' : 'not done' %>
-          </li>
-          <% }) %>
-      </ul>
-      <a href="/">Home</a>
+  <% } %>
+  <ul>
+    <% devSkills.forEach(function(skill) { %>
+      <li>
+        <a href="/devskills/<%= skill._id %>">
+          <%= skill.text %>
+        </a>
+        -
+        <%= skill.done ? 'done' : 'not done' %>
+      </li>
+    <% }) %> 
+  </ul>
+  <a href="/">Home</a>
 </body>
 
 </html>
